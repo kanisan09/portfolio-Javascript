@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>たこです</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bd-tako">
+        <img id="takoImage" src="image/tako3.gif" alt="たこ">
+        <h1 id="message"></h1>
+        <script>
+            const message = [
+                "｛せや、正解や。わし明石海生まれやねん。 ）",
+                "｛مكان الميلاد؟ المغرب ）",
+                "｛ 残念！出生地？中国 ）",
+                "｛ ¿ NO Lugar de nacimiento? México ）",
+                "｛ 残念、既にたこ焼きになりました。他のタコにあたってください。 ）"
+            ];
+            const messageElement = document.getElementById("message");
+            const takoImage = document.getElementById("takoImage"); // ここで画像要素を取得
+            const randomIndex = Math.floor(Math.random() * message.length);
+            messageElement.textContent = message[randomIndex];
+
+            if (message[randomIndex] === "｛ 残念、既にたこ焼きになりました。他のタコにあたってください。 ）") {
+                takoImage.src = "image/takoyaki.png";
+                takoImage.alt = "たこ焼き";
+            }
+        </script>
+    </div>
+    <p>
+        <a href="tako.html">
+            <button id="back-btn">他のタコを探す</button>
+    </p>
+
+</body>
+
+</html>
