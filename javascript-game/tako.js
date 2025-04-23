@@ -15,6 +15,8 @@ images.forEach((image, index) => {
   } else if (index === 4){
     duration = 40000;
   } else if (index === 5){
+    duration = 50000;
+  }else if (index === 6){
     duration = 5000;
   }
 
